@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="fullscreen content-align-left">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Iosif Astrukov</title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,700italic,500" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="default-type">
+	<header class="menu-left main_header short_header">
+        <div class="header_wrapper">
+            <a href="javascript:void(0)" class="header_toggler"></a>
+            <div class="logo_wrapper">
+                <br><br><br><br><br><br><br><br>
+            </div>
+            
+	    <nav>
+                <div class="menu-main-menu-container">
+                	<ul class="menu">
+
+			<li class="mymenu-icon-home"><a href="index.html"><span>Home</span></a></li>
+
+			<li class="mymenu-icon-camera menu-item-has-children">
+                         	
+			<a href="#"><span>Gallery</span></a>
+                            <ul class="sub-menu">
+                                
+                                <li><a href="stilllife.html"><span>Still life</span></a></li>
+                                <li><a href="landscape.html"><span>Landscape</span></a></li>
+                                <li><a href="street.html"><span>Street</span></a></li>
+                                <li><a href="blackwhite.html"><span>Black&White</span></a></li>
+                                <li><a href="people.html"><span>People</span></a></li>
+                                <li><a href="dancine.html"><span>DanCine project</span></a></li>
+                                <li><a href="stage.html"><span>Stage</span></a></li>
+                                <li><a href="backstage.html"><span>Backstage</span></a></li>
+                                <li><a href="wildlife.html"><span>Wildlife</span></a></li>
+                                <li><a href="writings.html"><span>Writings</span></a></li>
+                                <li><a href="commercial.html"><span>Commercial</span></a></li>
+                                <li><a href="pinhole.html"><span>Pinhole</span></a></li>
+                               <li><a href="one.html"><span>One</span></a></li>
+                               <li><a href="thewhite.html"><span>The White</span></a></li>
+                                
+                            </ul>
+
+			<li class="mymenu-icon-video current-menu-parent menu-item-has-children">
+                         	
+			<a href="#"><span>Video</span></a>
+                            <ul class="sub-menu">
+                                
+				<li><a href="elusive.html"><span>Elusive</span></a></li>
+                                <li class="current-menu-item"><a href="a.html"><span>A...</span></a></li>
+                                <li><a href="water.html"><span>Water</span></a></li>
+                                
+                            </ul>
+
+			<li class="mymenu-icon-user"><a href="about.html"><span>About me</span></a></li>
+                    	
+                         
+                	</ul>
+            	</div>
+            </nav>
+
+    </header>
+    <div class="fullscreen_block fw_background bg_video"><iframe src="http://player.vimeo.com/video/72739647?autoplay=1&amp;loop=0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>		
+	<script>
+		jQuery(document).ready(function() {
+			"use strict";
+			jQuery('.fw_background').height(jQuery(window).height());
+			jQuery('.main_header').removeClass('hided');
+			jQuery('.fullscreen_block').addClass('loaded');
+			if (jQuery(window).width() > 1024) {
+				if (jQuery('.bg_video').size() > 0) {
+					if (((jQuery(window).height()+150)/9)*16 > jQuery(window).width()) {				
+						jQuery('iframe').height(jQuery(window).height()+150).width(((jQuery(window).height()+150)/9)*16);
+						jQuery('iframe').css({'margin-left' : (-1*jQuery('iframe').width()/2)+'px', 'top' : "-75px", 'margin-top' : '0px'});
+					} else {
+						jQuery('iframe').width(jQuery(window).width()).height(((jQuery(window).width())/16)*9);
+						jQuery('iframe').css({'margin-left' : (-1*jQuery('iframe').width()/2)+'px', 'margin-top' : (-1*jQuery('iframe').height()/2)+'px', 'top' : '50%'});
+					}
+				}
+			} else if (jQuery(window).width() < 760) {
+				jQuery('.bg_video').height(jQuery(window).height()-jQuery('.main_header').height());
+				jQuery('iframe').height(jQuery(window).height()-jQuery('.main_header').height());
+			} else {
+				jQuery('.bg_video').height(jQuery(window).height());
+				jQuery('iframe').height(jQuery(window).height());				
+			}
+		});
+		jQuery(window).resize(function() {
+			"use strict";
+			jQuery('.fw_background').height(jQuery(window).height());
+			if (jQuery(window).width() > 1024	) {
+				if (jQuery('.bg_video').size() > 0) {
+					if (((jQuery(window).height()+150)/9)*16 > jQuery(window).width()) {
+						jQuery('iframe').height(jQuery(window).height()+150).width(((jQuery(window).height()+150)/9)*16);
+						jQuery('iframe').css({'margin-left' : (-1*jQuery('iframe').width()/2)+'px', 'top' : "-75px", 'margin-top' : '0px'});
+					} else {
+						jQuery('iframe').width(jQuery(window).width()).height(((jQuery(window).width())/16)*9);
+						jQuery('iframe').css({'margin-left' : (-1*jQuery('iframe').width()/2)+'px', 'margin-top' : (-1*jQuery('iframe').height()/2)+'px', 'top' : '50%'});
+					}
+				}
+			} else if (jQuery(window).width() < 760) {
+				jQuery('.bg_video').height(jQuery(window).height()-jQuery('.main_header').height());
+				jQuery('iframe').height(jQuery(window).height()-jQuery('.main_header').height());
+			} else {
+				jQuery('.bg_video').height(jQuery(window).height());
+				jQuery('iframe').height(jQuery(window).height());				
+			}
+		});
+	</script>      
+	<div class="custom_bg"></div>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="js/modules.js"></script>
+	<script type="text/javascript" src="js/theme.js"></script>
+</body>
+</html>

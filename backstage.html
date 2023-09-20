@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="fullscreen content-align-left">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Iosif Astrukov</title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,700italic,500" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="default-type">
+	<header class="menu-left main_header short_header">
+        <div class="header_wrapper">
+            <a href="javascript:void(0)" class="header_toggler"></a>
+            <div class="logo_wrapper">
+                <br><br><br><br><br><br><br><br>
+            </div>
+            <nav>
+                <div class="menu-main-menu-container">
+                	<ul class="menu">
+
+			<li class="mymenu-icon-home"><a href="index.html"><span>Home</span></a></li>
+
+			<li class="mymenu-icon-camera current-menu-parent menu-item-has-children">
+                         	
+			<a href="#"><span>Gallery</span></a>
+                            <ul class="sub-menu">
+                                
+                                <li><a href="stilllife.html"><span>Still life</span></a></li>
+                                <li><a href="landscape.html"><span>Landscape</span></a></li>
+                                <li><a href="street.html"><span>Street</span></a></li>
+                                <li><a href="blackwhite.html"><span>Black&White</span></a></li>
+                                <li><a href="people.html"><span>People</span></a></li>
+                                <li><a href="dancine.html"><span>DanCine project</span></a></li>
+                                <li><a href="stage.html"><span>Stage</span></a></li>
+                                <li class="current-menu-item"><a href="backstage.html"><span>Backstage</span></a></li>
+                                <li><a href="wildlife.html"><span>Wildlife</span></a></li>
+                                <li><a href="writings.html"><span>Writings</span></a></li>
+                                <li><a href="commercial.html"><span>Commercial</span></a></li>
+                                <li><a href="pinhole.html"><span>Pinhole</span></a></li>
+                               <li><a href="one.html"><span>One</span></a></li>
+                               <li><a href="thewhite.html"><span>The White</span></a></li>
+                                
+                            </ul>
+
+			<li class="mymenu-icon-video menu-item-has-children">
+                         	
+			<a href="#"><span>Video</span></a>
+                            <ul class="sub-menu">
+
+				<li><a href="elusive.html"><span>Elusive</span></a></li>
+                                <li><a href="a.html"><span>A...</span></a></li>
+                                <li><a href="water.html"><span>Water</span></a></li>
+                                
+                            </ul>
+
+			<li class="mymenu-icon-user"><a href="about.html"><span>About me</span></a></li>
+                    	
+                         
+                	</ul>
+            	</div>
+            </nav>
+            
+    </header>
+    
+    
+    <script>
+		gallery_set = [
+			
+			{image: "images/she.jpg", thmb: "thumbnails/she.jpg"},
+			{image: "images/look.jpg", thmb: "thumbnails/look.jpg"},
+			{image: "images/lip.jpg", thmb: "thumbnails/lip.jpg"},
+			{image: "images/makeup.jpg", thmb: "thumbnails/makeup.jpg"},
+			{image: "images/yani.jpg", thmb: "thumbnails/yani.jpg"},
+			{image: "images/mirror.jpg", thmb: "thumbnails/mirror.jpg"},
+			{image: "images/hair.jpg", thmb: "thumbnails/hair.jpg"},
+			{image: "images/touch.jpg", thmb: "thumbnails/touch.jpg"},
+			{image: "images/still.jpg", thmb: "thumbnails/still.jpg"},
+
+			
+		]		
+		jQuery(document).ready(function(){
+			"use strict";
+			jQuery('.main_header').removeClass('hided');
+			jQuery('html').addClass('hasPag');
+			jQuery('body').fs_gallery({
+				fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
+				fit: 'fit_height',
+				slide_time: 3300, /*This time must be < then time in css*/
+				autoplay: 1,
+				slides: gallery_set
+			});
+			jQuery('.fs_share').click(function(){
+				jQuery('.fs_fadder').removeClass('hided');
+				jQuery('.fs_sharing_wrapper').removeClass('hided');
+				jQuery('.fs_share_close').removeClass('hided');
+			});
+			jQuery('.fs_share_close').click(function(){
+				jQuery('.fs_fadder').addClass('hided');
+				jQuery('.fs_sharing_wrapper').addClass('hided');
+				jQuery('.fs_share_close').addClass('hided');
+			});
+			jQuery('.fs_fadder').click(function(){
+				jQuery('.fs_fadder').addClass('hided');
+				jQuery('.fs_sharing_wrapper').addClass('hided');
+				jQuery('.fs_share_close').addClass('hided');
+			});
+		});
+	</script>
+    <div class="fw_line loaded fs_gallery ">
+    	<div class="fw_line_wrapper"></div>
+    </div>
+    <a href="javascript:void(0)" class="pagline_toggler "></a>
+	<div class="custom_bg"></div>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="js/modules.js"></script>
+	<script type="text/javascript" src="js/theme.js"></script>
+</body>
+</html>

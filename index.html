@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="strip_template">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<title>Iosif Astrukov</title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,700italic,500" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<figure class="strip-menu" data-width="20" data-count="6">
+        <section class="strip-item" style="background-image:url(images/main.jpg)">
+            <div class="strip-fadder"></div>
+            <a href="about.html" class="wrapped_link"></a>
+            <div class="strip-text">
+                <div>
+                    <h1 class="strip-title">Iosif Astrukov</h1>
+                    <h3 class="strip-caption">My Art of Photography</h3>
+                </div>
+            </div>
+                      
+        </section>
+        <section class="strip-item" style="background-image:url(images/main1.jpg)">
+            <div class="strip-fadder"></div>
+            <a href="stilllife.html" class="wrapped_link"></a>
+            <div class="strip-text">
+                <div>
+                    <h1 class="strip-title">Still Life</h1>
+                   
+                </div>
+            </div>
+
+	</section>
+        <section class="strip-item" style="background-image:url(images/main2.jpg)">
+            <div class="strip-fadder"></div>
+            <a href="blackwhite.html" class="wrapped_link"></a>
+            <div class="strip-text">
+                <div>
+                    <h1 class="strip-title">Black&White</h1>
+                   
+                </div>
+            </div>
+
+	    </section>
+        <section class="strip-item" style="background-image:url(images/main3.jpg)">
+            <div class="strip-fadder"></div>
+            <a href="stage.html" class="wrapped_link"></a>
+            <div class="strip-text">
+                <div>
+                    <h1 class="strip-title">Stage</h1>
+
+                </div>
+            </div>
+            
+        </section>
+        <section class="strip-item" style="background-image:url(images/main4.jpg)">
+            <div class="strip-fadder"></div>
+            <a href="commercial.html" class="wrapped_link"></a>
+            <div class="strip-text">
+                <div>
+                    <h1 class="strip-title">Commercial</h1>
+                  
+                </div>
+            </div>
+            
+        </section>
+	<section class="strip-item" style="background-image:url(images/main5.jpg)">
+            <div class="strip-fadder"></div>
+            <a href="a.html" class="wrapped_link"></a>
+            <div class="strip-text">
+                <div>
+                    <h1 class="strip-title">A...</h1>
+                  
+                </div>
+            </div>
+            
+        </section>
+        
+        
+    </figure>   
+    <script>
+		jQuery(document).ready(function($) {
+			"use strict";
+			jQuery('.strip-item').css({'width': $('.strip-menu').attr('data-width') + '%'});
+			if (jQuery(window).width() > 1024) {
+				var base_width = $('.strip-menu').attr('data-width');
+				var count = $('.strip-menu').attr('data-count');
+				$('section.strip-item').hover(function(){
+					$('.strip-item').css('width', (100-base_width*2)/(count-1)+'%');
+					$(this).css('width', base_width*2+'%');
+				},function(){
+					$('.strip-item').css('width', base_width+'%');				
+				});
+			}
+			if (jQuery(window).width() > 760 && jQuery(window).width() < 1025) {
+				jQuery('.wrapped_link').click(function(e) {
+					if (!jQuery(this).parents('.strip-item').hasClass('hovered')) {
+						var base_width = $('.strip-menu').attr('data-width');
+						var count = $('.strip-menu').attr('data-count');						
+						e.preventDefault();
+						jQuery('.strip-item').removeClass('hovered');
+						jQuery(this).parents('.strip-item').addClass('hovered');
+						jQuery('.strip-item').css('width', (100-base_width*2)/(count-1)+'%');
+						jQuery(this).parents('.strip-item').css('width', base_width*2+'%');
+					}
+				});
+			}
+		});	
+	</script>     
+	<div class="custom_bg"></div>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="js/modules.js"></script>
+	<script type="text/javascript" src="js/theme.js"></script>
+</body>
+</html>
